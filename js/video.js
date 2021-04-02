@@ -18,15 +18,21 @@ const videoContents = [
         category: '회원님 취향저격 장르 시대물'
     },
     {
-        title: 'Hello, Me',
+        title: 'Altered Carbon',
         details : 'TV series',
-        url: 'Hello, Me',
-        category: '회원님 취향저격 로맨스물'
+        url: 'Altered Carbon',
+        category: '회원님 취향저격 SF장르물'
     },
     {
         title: 'Jupiter’s Legacy',
         details : 'Movie',
         url: 'Jupiter’s Legacy',
         category: '회원님 추천드리는 영화'
+    },
+    {
+        title: 'Dark',
+        details : 'Season 1 teaser',
+        url: 'Dark',
+        category: '회원님이 찜한 넷플릭스 오리지널'
     }
 ];

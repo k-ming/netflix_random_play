@@ -6,18 +6,19 @@ const closeBtn = document.querySelector('.close');
 const nextBtn = document.querySelector('.right-btn');
 const preBtn = document.querySelector('.left-btn');
 
-let Playing = false;
+const videoCon = document.querySelector('video');
+
 
 
 //Play vidoe and button move to place
 playBtn.addEventListener('click', ()=>{
     playVideo();
+    setPlay();
 });
 
 nextBtn.addEventListener('click',playVideo);
 preBtn.addEventListener('click',playVideo);
-
-closeBtn.addEventListener('click',playVideo);
+closeBtn.addEventListener('click',stopPlay);
 
 
 
@@ -26,18 +27,17 @@ function playVideo(){
     let randomIndex = Math.floor(Math.random() * videoContents.length)
     let randomVideo = videoContents[randomIndex];
 
-
-    const videoTag = `<video src="video/${randomVideo.url}.mp4" autoplay></video>`;
+     const videoTag = `<video src="video/${randomVideo.url}.mp4" autoplay></video>`;
     video.innerHTML = videoTag;
-
-
+        
+        
     //get video info
     const videoDetail = `<p>${randomVideo.title}</p>
-    <p>${randomVideo.details}</p>
-    <p>${randomVideo.category}</p>
-    `
+                        <p>${randomVideo.details}</p>
+                        <p>${randomVideo.category}</p>`
     videoInfo.innerHTML = videoDetail;
     videoInfo.classList.add('active');
+
 
     // PlayBtn click & play video
     playBtn.classList.add('active');
@@ -49,9 +49,10 @@ function playVideo(){
     console.log(videoInfo)
 }
 
-function nextPlay(){
-    
+function setPlay(){
+    setInterval(playVideo, 50000);
 }
-function playStop(){
 
+function stopPlay(){
+    location.reload();
 }
