@@ -112,14 +112,14 @@ body{
   height: 40px;
   position: absolute;
   top: 15px;
-  left: -15px;
+  left: -0.8%;
   cursor: pointer;
   transition: all 0.2s;
   pointer-events: none;
 }
 
 .left-btn:hover{
-  left: -18px;
+left: -1%;
 }
 
 .right-btn{
@@ -127,7 +127,7 @@ body{
   height: 40px;
   position: absolute;
   top: 15px;
-  left: 838px;
+  right: 4.5%;
   text-align: right;
   cursor: pointer;
   transition: all 0.2s;
@@ -135,7 +135,7 @@ body{
 }
 
 .right-btn:hover{
-  left: 842px;
+   right: 4%;
 }
 
 .right-btn.active{
